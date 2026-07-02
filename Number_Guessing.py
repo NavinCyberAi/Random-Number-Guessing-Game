@@ -1,8 +1,9 @@
 class game():
-    def __init__(self,Start_Game):
-        self.Start_Game=Start_Game
+    def Display(self):
+        self.Name=input("Enter Your Name:")
     def Guess(self):
-        print("+)_(+Welcome to The  Random System Guessing Game+)_(+", "the player Name is:",self.Start_Game) 
+        print("Welcome to the Random Number Guessing Game")
+        print(f"👤 Player Name: {self.Name}")
         import random
         My_Number=random.randint(1,100)
         for i in range(1,11):
@@ -24,5 +25,6 @@ class game():
         else:
             print(f"Sorry Your Number is {Guess_Number} Not Correct And Your Attempt is {i}")
             print(My_Number ,"is correct answer")
-Player=game("Navin Sachin")
+Player=game()
+Player.Display()
 Player.Guess()
